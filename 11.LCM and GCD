@@ -1,0 +1,32 @@
+import math
+
+def lcm(x, y):
+    return x * y // math.gcd(x, y)
+
+def find_lcm(numbers):
+    lcm_result = numbers[0]
+    for num in numbers[1:]:
+        lcm_result = lcm(lcm_result, num)
+    return lcm_result
+
+def find_gcd(numbers):
+    gcd_result = numbers[0]
+    for num in numbers[1:]:
+        gcd_result = math.gcd(gcd_result, num)
+    return gcd_result
+
+def main():
+    n = int(input("Enter the number of integers: "))
+    numbers = []
+    for i in range(n):
+        num = int(input(f"Enter integer {i+1}: "))
+        numbers.append(num)
+
+    lcm_result = find_lcm(numbers)
+    gcd_result = find_gcd(numbers)
+
+    print(f"The LCM of the numbers is: {lcm_result}")
+    print(f"The GCD of the numbers is: {gcd_result}")
+
+if __name__ == "__main__":
+    main()
