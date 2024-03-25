@@ -1,0 +1,22 @@
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def print_non_primes(a, b):
+    non_primes = []
+    for num in range(a, b + 1):
+        if not is_prime(num):
+            non_primes.append(num)
+    print("Non-prime numbers between", a, "and", b, "are:", non_primes)
+
+A = int(input("Enter the value of A: "))
+B = int(input("Enter the value of B: ")
+)
+if A > B:
+    print("A must be less than B.")
+else:
+    print_non_primes(A, B)
