@@ -1,0 +1,32 @@
+def sort_names(names, ascending=True):
+    # Sort the names list
+    sorted_names = sorted(names)
+    
+    # If descending order is requested, reverse the sorted list
+    if not ascending:
+        sorted_names.reverse()
+    
+    return sorted_names
+
+# Get list of names from the user
+names = input("Enter names separated by commas: ").split(',')
+
+# Get sorting order from the user
+order = input("Enter 'asc' for ascending order or 'desc' for descending order: ")
+
+# Determine sorting order based on user input
+if order.lower() == 'asc':
+    ascending = True
+elif order.lower() == 'desc':
+    ascending = False
+else:
+    print("Invalid input. Defaulting to ascending order.")
+    ascending = True
+
+# Sort the names
+sorted_names = sort_names(names, ascending)
+
+# Print the sorted names
+print("Sorted names:")
+for name in sorted_names:
+    print(name.strip())  # Strip leading/trailing whitespaces if any
