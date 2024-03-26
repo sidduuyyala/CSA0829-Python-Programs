@@ -1,0 +1,19 @@
+def reverse_words(s):
+    # Split the string into words
+    words = s.split()
+
+    # Reverse the order of words
+    reversed_words = words[::-1]
+
+    # Join the reversed words to form the final string
+    reversed_string = ' '.join(reversed_words)
+
+    return reversed_string
+
+def main():
+    s = input("Enter a string: ")
+    reversed_string = reverse_words(s)
+    print("Reversed string:", reversed_string)
+
+if __name__ == "__main__":
+    main()
