@@ -1,0 +1,50 @@
+def power(x, n):
+    return x ** n
+
+def add(x, n):
+    return x + n
+
+def subtract(x, n):
+    return x - n
+
+def multiply(x, n):
+    return x * n
+
+def divide(x, n):
+    if n == 0:
+        return "Cannot divide by zero"
+    return x / n
+
+def main():
+    x = float(input("Enter the value of x: "))
+    n = float(input("Enter the value of n: "))
+    
+    print("\nSelect operation:")
+    print("1. Power")
+    print("2. Addition")
+    print("3. Subtraction")
+    print("4. Multiplication")
+    print("5. Division")
+
+    choice = input("Enter choice (1/2/3/4/5): ")
+
+    if choice == '1':
+        result = power(x, n)
+        print(f"Result of {x} raised to the power of {n} is: {result}")
+    elif choice == '2':
+        result = add(x, n)
+        print(f"Addition of {x} and {n} is: {result}")
+    elif choice == '3':
+        result = subtract(x, n)
+        print(f"Subtraction of {n} from {x} is: {result}")
+    elif choice == '4':
+        result = multiply(x, n)
+        print(f"Multiplication of {x} and {n} is: {result}")
+    elif choice == '5':
+        result = divide(x, n)
+        print(f"Division of {x} by {n} is: {result}")
+    else:
+        print("Invalid input")
+
+if __name__ == "__main__":
+    main()
